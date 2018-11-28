@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <h1>Add author</h1>
+    <form method="POST" action="/author">
+      <input type="text" name="name">
+
+      <input type="text" name="nationality">
+      <input type="number" name="age">
+
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Authors</h1>
+    <table>
+      {% for author in authors %}
+        <tr>
+          <td>
+            {{author.name}}
+          </td>
+          <td>
+            {{author.nationality}}
+          </td>
+          <td>
+            {{author.age}}
+          </td>
+        </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>
